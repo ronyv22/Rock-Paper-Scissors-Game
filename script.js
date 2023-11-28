@@ -7,9 +7,8 @@ Step 2: In css, style the html page structure to be more visual appealing.
 Step 3: In javascript, define functions that will determine the winner of each turn based on player or computer choices.
 
 
-First thing I did in javascript is defined a function called 'game' which will be the main function that will run the other functions for the game.
 
-Next, I declared some variables which will be assigned to a querySelector method that will select the corresponding elements from the html doc by their ID and classes, 
+First, I declared some variables which will be assigned to a querySelector method that will select the corresponding elements from the html doc by their ID and classes, 
 displaying the current round, the player/cpu scores, the buttons the player will choose, the reset button, and the cpu choices.
 
 After that, I declared variables thst will initialize the player/cpu scores as well as the current round to 0.
@@ -28,12 +27,8 @@ whether the player or cpu won the current round in the html doc.
 To reset the game, I defined another function, called 'reset' withn the function, intialized the player/cpu scores and the round number to 0. 
 I also clear the messages from the html doc when called.
 
-To have the player choice buttons and reset button interact with the game, I added Event listeners which will call the playGame and resetGame function 
-when the player clicks on the  choice buttons and reset button.
-
-
-Finally, the function, 'game' is called to start the game.
-
+ Finally, to have the player choice buttons and reset button interact with the game, I added Event listeners which will call the playGame and resetGame functions
+when the player clicks on the choice buttons and reset button.
 
 */
 
@@ -41,8 +36,8 @@ Finally, the function, 'game' is called to start the game.
 
 
 
-// Function with game logic //
-const game = () => {
+
+    // Declared variables to be assigned to querySelector methods selecting the corresponding elements//
 
     const rockBtn = document.querySelector("#rock");
     const paperBtn = document.querySelector("#paper");
@@ -115,9 +110,7 @@ const game = () => {
     paperBtn.addEventListener("click", () => playGame("paper"));
     scissorsBtn.addEventListener("click", () => playGame("scissors"));
     resetBtn.addEventListener("click", resetGame);
-};
 
 
 
-// Call game Function//
-game();
+
